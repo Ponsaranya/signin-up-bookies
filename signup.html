@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        background-color: #ADD8E6;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .signup {
+        background-color: aliceblue;
+        padding: 50px;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="bookies">Bookies</h1>
+    <div class="forms-container">
+        <div class="signup">
+            <h1>Signup</h1>
+            <form action="login.php" method="POST">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Signup">
+                <br>
+                <a>Already had an account?</a><a href="log.html">Login</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

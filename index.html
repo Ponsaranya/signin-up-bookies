@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Bookies</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6; /* Adjust background color */
+        }
+        .container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            animation: move-up 2s ease-in-out forwards;
+        }
+        .welcome {
+            animation: fade-out 1s ease-in-out forwards 1s; /* Fade out "Welcome" text */
+        }
+        .bookies {
+            animation: rotate-scale 2s ease-in-out forwards;
+            top: 30%; /* Adjust the position of the "Bookies" text */
+        }
+        .forms-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .form {
+            display: none;
+            padding: 50px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login {
+            margin-right: 20px;
+        }
+        @keyframes rotate-scale {
+            0% {
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes move-up {
+            0% {
+                top: 50%;
+            }
+            100% {
+                top: 1%;
+            }
+        }
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="welcome">Welcome to</h1>
+        <h1 class="bookies">Bookies</h1>
+    </div>
+    <div class="forms-container" style="padding-top: 150px;">
+        <div class="form login" >
+            <h1>Login</h1>
+            <!-- Login form -->
+            <form action="login.php" method="POST">
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login">
+                <p>Don't have an account?</p><a href="signup.html">signup </a>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    // Show the login and signup forms after the content moves up
+    setTimeout(function() {
+        document.querySelector('.login').style.display = 'block';
+        document.querySelector('.signup').style.display = 'block';
+    }, 3000); // Adjusted delay for login and signup forms
+</script>
+</html>
